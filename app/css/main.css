@@ -106,10 +106,12 @@
     .footer .footer_top-bg .footer_top-right .footer_top-right_title h1 {
       font-size: 28px;
       line-height: 36px; }
-    .footer .footer_top-bg .footer_top-right .footer_top-right_title h2 {
-      font-size: 50vw; }
   .footer .footer_top-bg .footer_top-right .footer_social {
     width: 260px; }
     .footer .footer_top-bg .footer_top-right .footer_social a {
       width: 50px;
       height: 50px; } }
+
+@media (max-width: 490px) {
+  .footer .footer_top-bg .footer_top-right .footer_top-right_title h2 {
+    font-size: 50vw; } }
