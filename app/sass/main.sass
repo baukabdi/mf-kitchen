@@ -1,0 +1,147 @@
+@font-face
+	font-family: OpenSansCondensed-Light
+	src: url('../fonts/OpenSansCondensed-Light.ttf')
+
+@font-face
+	src: url('../fonts/OpenSansCondensed-Bold.ttf')
+	font-family: OpenSansCondensed-Bold
+
+// vars
+$openSansLight: OpenSansCondensed-Light
+$openSansBold: OpenSansCondensed-Bold
+
+$vk: #4c75a3
+$facebook: #475995
+$telegram: #6ec2f5
+$viber: #8f5db7
+// vars end
+
+
+.h-100
+	height: 100%
+
+.footer
+	.footer_top-bg
+		background-color: #f3cdd0
+		height: 300px
+		margin: 300px 0
+		position: relative
+		.footer_top
+			display: flex
+			justify-content: space-between
+			align-items: center
+			height: 100%
+
+		.footer_top-left
+			max-width: 590px
+			width: 100%
+			img
+				position: absolute
+				bottom: 0
+
+		.footer_top-right
+			position: relative
+			.footer_top-right_title
+				h1
+					font-family: $openSansBold
+					font-size: 40px
+					color: #274351
+					text-transform: uppercase
+					line-height: 56px
+					position: relative
+					z-index: 2
+				h2
+					content: '10%'
+					font-family: $openSansBold
+					text-transform: uppercase
+					color: rgba(#d6b2b5, .30)
+					display: block
+					position: absolute
+					font-size: 288px
+					top: 40%
+					left: 50%
+					transform: translate(-50%, -50%)
+					z-index: 0
+
+			.footer_social
+				display: flex
+				justify-content: space-between
+				margin: 0 auto
+				margin-top: 25px
+				width: 310px
+				position: relative
+				z-index: 2
+				a
+					display: flex
+					flex-direction: column
+					align-items: center
+					justify-content: center
+					width: 60px
+					height: 60px
+					border-radius: 50%
+					transition: transform 0.3s ease
+					&:hover
+						animation: rotate 0.3s linear
+
+						
+
+				.vk
+					background-color: $vk
+				.facebook
+					background-color: $facebook
+				.telegram
+					background-color: $telegram
+				.viber
+					background-color: $viber
+
+// slider img animation 
+@-webkit-keyframes rotate
+  from
+    -webkit-transform: rotate(0deg)
+    transform: rotate(0deg)
+
+  to
+    -webkit-transform: rotate(180deg)
+    transform: rotate(360deg)
+// slider img animation end
+
+@media (min-width: 1300px)
+	.container
+		width: 1261px
+
+
+@media (max-width: 1200px)
+	.footer 
+		.footer_top-bg
+			height: auto
+ 		
+ 		.footer_top-left
+ 			img
+ 				position: static
+
+@media (max-width: 992px)
+	.footer 
+		.footer_top-bg 
+			.footer_top
+				flex-direction: column-reverse
+
+			.footer_top-left_img
+				margin-top: 65px
+				img
+					width: 100%
+
+			.footer_top-right
+				.footer_top-right_title
+					text-align: center
+					padding-top: 50px
+					h1
+						font-size: 28px
+						line-height: 36px
+			 	h2
+			 		font-size: 50vw
+
+		 	.footer_social
+		 		width: 260px
+		 		a
+		 			width: 50px
+		 			height: 50px
